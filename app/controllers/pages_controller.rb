@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-	def index
-		
-	end
+def index
+  @posts = Post.limit(5)
+end
 end

@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   root to:'pages#index'
 
+resources :posts do
+  collection do
+    get 'hobby'
+    get 'study'
+    get 'team'
+  end
+end
 
   devise_scope :user do
   get 'login', to: 'devise/sessions#new'
