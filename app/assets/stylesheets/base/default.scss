@@ -32,3 +32,8 @@ a:hover, a:active, a:link, a:visited {
 .control-label {
   display: none;
 }
+
+.login-button, .sign-up-button {
+  background-color: $navbarColor;
+  color: white !important;
+}
