@@ -84,6 +84,42 @@
   }
 }
 
+.fa-search {
+  position:absolute; 
+  bottom:14px; 
+  left:10px; 
+  width:20px; 
+  height:10px;
+}
+
+.infinite-scroll {
+  display: none;
+}
+
+.send-message-to-user {
+  background-color: $navbarColor;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+}
+
+.contact-user {
+  text-align: center;
+}
+
+.contacted-user {
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: $navbarColor;
+  color: white;
+}
+
 #branch-main-content {
   background: white;
   height: calc(100vh - 50px);
@@ -91,14 +127,6 @@
 
 #feed {
   background-color: white;
-}
-
-.fa-search {
-  position:absolute; 
-  bottom:14px; 
-  left:10px; 
-  width:20px; 
-  height:10px;
 }
 
 #search-form {
@@ -119,7 +147,4 @@
     margin: 10px 0; 
     padding-left: 30px;
   }
-}
-.infinite-scroll {
-  display: none;
 }

@@ -10,6 +10,7 @@ gem 'devise'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'gon', '~> 6.2', '>= 6.2.1'
 gem 'faker'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 # Use SCSS for stylesheets

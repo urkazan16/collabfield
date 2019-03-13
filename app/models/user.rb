@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts, dependent: :destroy
+
+  has_many :private_messages, class_name: 'Private::Message'
+has_many  :private_conversations, 
+          foreign_key: :sender_id, 
+          class_name: 'Private::Conversation'
 end

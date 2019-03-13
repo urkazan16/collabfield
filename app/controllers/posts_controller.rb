@@ -3,6 +3,9 @@ before_action :redirect_if_not_signed_in, only: [:new]
   
 	  def show
     @post = Post.find(params[:id])
+    if user_signed_in?
+  @message_has_been_sent = conversation_exist?
+end
   end
 
   def new
@@ -47,6 +50,9 @@ end
     posts_for_branch(params[:action])
   end
 
+
+
+
 private
 
 def post_params
@@ -57,6 +63,10 @@ end
 def posts_for_branch(branch)
   @categories = Category.where(branch: branch)
   @posts = get_posts.paginate(page: params[:page])
+end
+
+def conversation_exist?
+  Private::Conversation.between_users(current_user.id, @post.user.id).present?
 end
 
 end

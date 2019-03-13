@@ -1,0 +1,48 @@
+@media screen and (max-width: 767px) {
+  .pc-menu {
+    display: none !important;
+  }
+
+   #side-menu {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .solid-color-mode, .border-color-mode {
+    .post-text {
+      font-size: 16px;  
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 550px) {
+  .page-title {
+      font-size: 20px;
+      font-size: 2rem;
+  }
+  .new-post-button-parent {
+    text-align: center;
+    span {
+      display: none !important;
+    }
+  }
+  .post-button {
+    padding: 5px;
+  }
+  .category-item {
+    a {
+      padding: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .single-post-list {
+    min-height: 65px;
+    max-height: 65px;
+    padding: 10px 0;
+  }
+}
