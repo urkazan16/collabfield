@@ -6,7 +6,8 @@ class Private::Message < ApplicationRecord
              class_name: 'Private::Conversation',
              foreign_key: :conversation_id
 	
-	 
+	   validates :body, presence: true
+  validates :user_id, presence: true
 
 # after_create_commit do 
 #   Private::MessageBroadcastJob.perform_later(self, previous_message)
