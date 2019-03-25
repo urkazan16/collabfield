@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, :controllers => {:registrations => "registrations"}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+# devise_for :users, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
 
   root to: 'pages#index'
   get 'messenger', to: 'messengers#index'
@@ -20,7 +21,14 @@ end
   devise_scope :user do
   get 'login', to: 'devise/sessions#new'
   get 'signup', to: 'devise/registrations#new'
+
+# Routes for Google authentication
+get 'auth/:provider/callback', to: 'sessions#googleAuth'
+get 'auth/failure', to: redirect('/')
+
+
 end
+
 
 namespace :private do 
   resources :conversations, only: [:create] do
